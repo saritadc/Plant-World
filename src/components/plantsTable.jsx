@@ -18,16 +18,6 @@ const PlantsTable = (props) => {
                 onLikeToggle={() => onLike(movie)}
               />
             </div>
-            
-            
-            {/* <td>
-              <button
-                onClick={() => onDelete(movie)}
-                className="btn btn-warning btn-sm"
-              >
-                Delete
-              </button>
-            </td> */}
           </div>
         ))}
       </div>
