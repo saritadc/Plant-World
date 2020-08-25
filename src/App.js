@@ -17,10 +17,11 @@ function App() {
       <Banner/>
         <BrowserRouter>
           <Switch>
-            <Route path="/store" exact component={Plants}></Route>
-            <Route path="/category" exact  component={ListCategory}></Route>
-            <Route path="/aboutus" exact  component={AboutUs}></Route>
-            <Route path="/contactus"  exact component={ContactUs}></Route>
+            <Route path="/store"  component={Plants}></Route>
+            <Route path="/"  component={Plants}></Route>
+            <Route path="/category"  component={ListCategory}></Route>
+            <Route path="/aboutus"   component={AboutUs}></Route>
+            <Route path="/contactus"   component={ContactUs}></Route>
             <Redirect from="/" exact to="/store" />
             <Redirect to="/not-found" />
           </Switch>
