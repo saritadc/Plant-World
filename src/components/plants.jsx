@@ -72,6 +72,7 @@ class Plants extends Component {
 
     return (
       <div className="items-container wrap-container">
+        <SearchBox value={searchQuery} onChange={this.handleSearch}/>
         <div>
           <ListGroup
             items={this.state.categories}
@@ -82,7 +83,6 @@ class Plants extends Component {
         <div className="each-item-container">
           <h1 className="title-second title-product">Our Products</h1>
           {/* <p>There are {filtered .length} plants</p> */}
-          <SearchBox value={searchQuery} onChange={this.handleSearch}/>
           <PlantsTable
             plants={plants}
             onLike={this.handleLikeToggle}
