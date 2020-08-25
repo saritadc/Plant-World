@@ -18,11 +18,11 @@ function App() {
         <BrowserRouter>
           <Switch>
             <Route path="/store"  component={Plants}></Route>
-            <Route path="/"  component={Plants}></Route>
+            <Route path="/" exact  component={Plants}></Route>
             <Route path="/category"  component={ListCategory}></Route>
             <Route path="/aboutus"   component={AboutUs}></Route>
             <Route path="/contactus"   component={ContactUs}></Route>
-            <Redirect from="/" exact to="/store" />
+            {/* <Redirect from="/" exact to="/store" /> */}
             <Redirect to="/not-found" />
           </Switch>
         </BrowserRouter>

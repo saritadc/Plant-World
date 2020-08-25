@@ -47,7 +47,8 @@ class Plants extends Component {
   };
 
   render() {
-    const { length: count } = this.state.plants;
+    // const { length: count } = this.state.plants;
+    console.log('plants',this.state.plants)
     const {
       pageSize,
       currentPage,

@@ -5,67 +5,57 @@ const plants = [
     _id: "5b21ca3eeb7f6fbccd471815",
     title: "Jade Plant",
     category: { _id: "5b21ca3eeb7f6fbccd471814", name: "Indoor Plants" },
-    numberInStock: 6,
-    dailyRentalRate: 2.5,
-
+    imageURL: "https://images.unsplash.com/photo-1597334133882-7027ac9bd95e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60"
   },
   {
     _id: "5b21ca3eeb7f6fbccd471816",
     title: "Peace Lily",
-    category: { _id: "5b21ca3eeb7f6fbccd471818", name: "Hanging Plants" },
-    numberInStock: 5,
-    dailyRentalRate: 2.5,
+    category: { _id: "5b21ca3eeb7f6fbccd471818", name: "Hanging plants" },
+    imageURL: "https://images.unsplash.com/photo-1513347650-efb9c18ea41a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80"
   },
   {
     _id: "5b21ca3eeb7f6fbccd471817",
-    title: "Shutter Island",
+    title: "Succelent",
     category: { _id: "5b21ca3eeb7f6fbccd471820", name: "Garden Plants" },
-    numberInStock: 8,
-    dailyRentalRate: 3.5,
     liked: true,
+    imageURL: "https://images.unsplash.com/photo-1513347650-efb9c18ea41a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80"
   },
   {
     _id: "5b21ca3eeb7f6fbccd47181a",
     title: "Hibiscus Plant",
     category: { _id: "5b21ca3eeb7f6fbccd471820", name: "Garden Plants" },
-    numberInStock: 7,
-    dailyRentalRate: 3.5,
     liked: true,
+    imageURL: "https://images.unsplash.com/photo-1513347650-efb9c18ea41a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80"
   },
   {
     _id: "5b21ca3eeb7f6fbccd47181b",
     title: "Snake Plant",
     category: { _id: "5b21ca3eeb7f6fbccd471814", name: "Indoor Plants" },
-    numberInStock: 7,
-    dailyRentalRate: 3.5,
+    imageURL: "https://images.unsplash.com/photo-1513347650-efb9c18ea41a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80"
   },
   {
     _id: "5b21ca3eeb7f6fbccd47181e",
     title: "Tulip",
     category: { _id: "5b21ca3eeb7f6fbccd471820", name: "Garden Plants" },
-    numberInStock: 7,
-    dailyRentalRate: 4.5,
+    imageURL: "https://images.unsplash.com/photo-1513347650-efb9c18ea41a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80"
   },
   {
     _id: "5b21ca3eeb7f6fbccd47181f",
     title: "Succelent",
     category: { _id: "5b21ca3eeb7f6fbccd471820", name: "Garden Plants" },
-    numberInStock: 4,
-    dailyRentalRate: 3.5,
+    imageURL: "https://images.unsplash.com/photo-1513347650-efb9c18ea41a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80"
   },
   {
     _id: "5b21ca3eeb7f6fbccd47182g",
     title: "Succelent",
     category: { _id: "5b21ca3eeb7f6fbccd471821", name: "Garden Plants" },
-    numberInStock: 5,
-    dailyRentalRate: 3.5,
+    imageURL: "https://images.unsplash.com/photo-1513347650-efb9c18ea41a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80"
   },
   {
     _id: "5b21ca3eeb7f6fbccd471821",
     title: "Aloe vera",
     category: { _id: "5b21ca3eeb7f6fbccd471818", name: "Indoor Plants" },
-    numberInStock: 7,
-    dailyRentalRate: 3.5,
+    imageURL: "https://images.unsplash.com/photo-1567689265664-1c48de61db0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80"
   }
   
 ];
@@ -93,8 +83,3 @@ export function savePlant(plant) {
   return plantInDb;
 }
 
-// export function deleteplant(id) {
-//   let plantInDb = plants.find((m) => m._id === id);
-//   plants.splice(plants.indexOf(plantInDb), 1);
-//   return plantInDb;
-// }
