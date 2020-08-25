@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Plant-World/static/css/main.8f773246.chunk.css",
+    "main.js": "/Plant-World/static/js/main.fa14a5e0.chunk.js",
+    "main.js.map": "/Plant-World/static/js/main.fa14a5e0.chunk.js.map",
+    "runtime-main.js": "/Plant-World/static/js/runtime-main.70045cb0.js",
+    "runtime-main.js.map": "/Plant-World/static/js/runtime-main.70045cb0.js.map",
+    "static/js/2.308d8a0f.chunk.js": "/Plant-World/static/js/2.308d8a0f.chunk.js",
+    "static/js/2.308d8a0f.chunk.js.map": "/Plant-World/static/js/2.308d8a0f.chunk.js.map",
+    "index.html": "/Plant-World/index.html",
+    "precache-manifest.64088ae1e35893b7da5d3fb2f5f8a5cf.js": "/Plant-World/precache-manifest.64088ae1e35893b7da5d3fb2f5f8a5cf.js",
+    "service-worker.js": "/Plant-World/service-worker.js",
+    "static/css/main.8f773246.chunk.css.map": "/Plant-World/static/css/main.8f773246.chunk.css.map",
+    "static/js/2.308d8a0f.chunk.js.LICENSE.txt": "/Plant-World/static/js/2.308d8a0f.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/Plant-World/static/media/background.aaf3b781.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.70045cb0.js",
+    "static/js/2.308d8a0f.chunk.js",
+    "static/css/main.8f773246.chunk.css",
+    "static/js/main.fa14a5e0.chunk.js"
+  ]
+}
