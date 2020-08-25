@@ -6,6 +6,7 @@ import Pagination from "./common/pagination";
 import { paginate } from "../utils/paginate";
 import ListGroup from "./common/listGroup";
 import PlantsTable from "./plantsTable";
+import SearchBox from './searchBox';
 
 class Plants extends Component {
   state = {
@@ -13,18 +14,15 @@ class Plants extends Component {
     categories: [],
     pageSize: 4,
     currentPage: 1,
+    searchQuery: "",
+    selectedGenres: null,
   };
 
   componentDidMount() {
-    const categories = [{name: "All Categories"}, ...getCategories()]
+    const categories = [{ name: "All Categories" }, ...getCategories()];
     this.setState({ plants: getPlants(), categories: categories });
   }
 
-  handleDelete = (singlePlant) => {
-    console.log(singlePlant);
-    const plants = this.state.plants.filter((m) => m._id !== singlePlant._id);
-    this.setState({ plants: plants });
-  };
 
   handleLikeToggle = (plant) => {
     console.log("Like", plant.title);
@@ -40,28 +38,34 @@ class Plants extends Component {
     console.log(page);
     this.setState({ currentPage: page });
   };
-
+  
   handleCategorySelect = (category) => {
     console.log(category);
     this.setState({ selectedCategory: category, currentPage: 1 });
   };
 
+  handleSearch = (query) => {
+    this.setState({searchQuery: query, selectedCategory: null, currentPage: 1})
+  }
+
+
   render() {
-    // const { length: count } = this.state.plants;
-    console.log('plants',this.state.plants)
+    console.log("plants", this.state.plants);
     const {
       pageSize,
       currentPage,
       selectedCategory,
+      searchQuery,
       plants: allPlants,
     } = this.state;
 
     // if (count === 0) return <p>There is no details in the database</p>;
 
-    //for select item according to category
-    const filtered = selectedCategory && selectedCategory._id
-      ? allPlants.filter((m) => m.category._id === selectedCategory._id)
-      : allPlants;
+    //for selecting item according to category
+    const filtered =
+      selectedCategory && selectedCategory._id
+        ? allPlants.filter((m) => m.category._id === selectedCategory._id)
+        : allPlants;
 
     //for pagination
     const plants = paginate(filtered, currentPage, pageSize);
@@ -73,12 +77,17 @@ class Plants extends Component {
             items={this.state.categories}
             selectedItem={this.state.selectedCategory}
             onItemSelect={this.handleCategorySelect}
-        />  
+          />
         </div>
         <div className="each-item-container">
           <h1 className="title-second title-product">Our Products</h1>
           {/* <p>There are {filtered .length} plants</p> */}
-          <PlantsTable plants={plants} onLike={this.handleLikeToggle} onDelete={this.handleDelete}/>
+          <SearchBox value={searchQuery} onChange={this.handleSearch}/>
+          <PlantsTable
+            plants={plants}
+            onLike={this.handleLikeToggle}
+            onDelete={this.handleDelete}
+          />
           <Pagination
             itemsCount={filtered.length}
             pageSize={pageSize}

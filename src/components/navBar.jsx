@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import SearchBox from "./searchBox";
 
 const NavBar = () => {
   return (
@@ -33,12 +34,7 @@ const NavBar = () => {
                 </Link>
               </li>
             </ul>
-            <form>
-              <input className="search" placeholder="search" type="search" />
-              <button className="search-btn" type="submit">
-                Search
-              </button>
-            </form>
+            <SearchBox/>
           </nav>
         </div>
       </div>
