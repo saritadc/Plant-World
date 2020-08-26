@@ -173,3 +173,25 @@ footer{
   font-size: 18px;
   margin-right: 2px;
 }
+
+/* responsive design  */
+
+
+
+/* responsive design */
+@media (min-width :1200px){
+  .bg-banner{
+    width: 100%;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .top-header{
+    position: absolute;
+  }
+  .wrap-container{
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1128px;
+  }
+}
