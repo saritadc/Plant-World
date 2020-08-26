@@ -11,9 +11,9 @@ const NavBar = () => {
         </Link>
         <div className="right-header right">
           <button className="menu-btn"></button>
-          <nav className="nav clearfix">
-            <ul className="nav-menus clearfix">
-              <li>
+          <nav className="nav left clearfix">
+            <ul className="nav-menus left clearfix">
+              <li className="left">
                 <Link to="/" title="Store">
                   <span>Store</span>
                 </Link>

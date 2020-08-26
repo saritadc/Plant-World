@@ -12,29 +12,25 @@ const Pagination = props => {
   console.log(pagesCount, itemsCount, pages, currentPage );
 
   return (
-    <nav>
-      <ul className="pagination">
-        {pages.map((page) => (
-          <li key={page} className={page === currentPage? "page-item active" : "page-item" }>
-            <a
-              onClick={() => onPageChange(page)}
-              className="page-link"
+    <div className="pagination">
+      <nav>
+        <ul>
+          {pages.map((page) => (
+            <li
+              key={page}
+              className={
+                page === currentPage ? "page-item active" : "page-item"
+              }
             >
-              {page}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+              <a onClick={() => onPageChange(page)} className="page-link">
+                {page}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
   );
 };
-
-// Pagination.propTypes = {
-//   itemsCount: PropTypes.number.isrequired,
-//   pageSize: PropTypes.number.isrequired,
-//   currentPage: PropTypes.number.isrequired,
-//   onPageChange: PropTypes.func.isrequired
-// }
-
 
 export default Pagination;

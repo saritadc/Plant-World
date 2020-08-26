@@ -12,14 +12,17 @@ const ListGroup = (props) => {
 
   return (
     <div className="list-group item-category">
+      
       {items.map((item) => (
-        <div className="bucket"
+        <div
+          className="bucket"
           key={item[valueProperty]}
           onClick={() => onItemSelect(item)}
-          className={
-            item === selectedItem ? "bucket active" : "bucket"
-          }
-          style={{ cursor: "pointer", backgroundImage: `url(${item[imageURL]}` }}
+          className={item === selectedItem ? "bucket active" : "bucket"}
+          style={{
+            cursor: "pointer",
+            backgroundImage: `url(${item[imageURL]}`,
+          }}
         >
           {item[textProperty]}
         </div>

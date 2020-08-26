@@ -92,7 +92,10 @@ class Plants extends Component {
     const { totalCount, data: plants } = this.getPageData();
     return (
       <div className="items-container wrap-container">
-        <div>
+        <div className="category-container">
+          <h1 className="title-second title-product category-title">
+            Category
+          </h1>
           <ListGroup
             items={this.state.categories}
             selectedItem={this.state.selectedCategory}
@@ -101,7 +104,7 @@ class Plants extends Component {
         </div>
         <div className="each-item-container">
           <h1 className="title-second title-product">Our Products</h1>
-         <SearchBox value={searchQuery} onChange={this.handleSearch} />
+          <SearchBox value={searchQuery} onChange={this.handleSearch} />
           {/* <p>There are {filtered .length} plants</p> */}
           <PlantsTable
             plants={plants}

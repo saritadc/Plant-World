@@ -6,7 +6,7 @@ import { categories } from '../services/fakeCategoryService';
 const PlantsTable = (props) => {
   const {plants, onLike}  = props
   return (
-    <div>
+  
       <div className="item-category">
         {plants.map((movie) => (
           <div className="bucket" key={movie._id} style={{backgroundImage: `url(${movie.imageURL}`, backgroundSize:'cover'}}>
@@ -21,7 +21,7 @@ const PlantsTable = (props) => {
           </div>
         ))}
       </div>
-    </div>
+  
   );
 }
  
