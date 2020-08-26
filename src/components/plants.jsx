@@ -21,6 +21,9 @@ class Plants extends Component {
   componentDidMount() {
     const categories = [{ name: "All Categories" }, ...getCategories()];
     this.setState({ plants: getPlants(), categories: categories });
+
+    
+
   }
 
   handleLikeToggle = (plant) => {

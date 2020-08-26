@@ -13,7 +13,7 @@ const ListGroup = (props) => {
   return (
     <div className="list-group item-category">
       
-      {items.map((item) => (
+      {Array.isArray(items) && items.map((item) => (
         <div
           className="bucket"
           key={item[valueProperty]}
