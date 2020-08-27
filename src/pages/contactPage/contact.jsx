@@ -1,12 +1,12 @@
 import React from 'react'; 
-import './aboutUs.css';
+import './contact.css';
 import { Link } from 'react-router-dom';
 
-const AboutUs = () => {
+const Contact = () => {
   return (
     <div className="about-container">
       <div className="about-us">
-        <h1>About Us</h1>
+        <h1>Contact Us</h1>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -24,6 +24,6 @@ const AboutUs = () => {
       </div>
     </div>
   );
-}
+};
  
-export default AboutUs;
+export default Contact;

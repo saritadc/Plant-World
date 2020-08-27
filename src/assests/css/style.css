@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&display=swap");
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Courgette", cursive;
 }
 
 .container {
@@ -90,48 +92,40 @@ ul {
   font-weight: 300;
   font-size: 18px;
   line-height: 21px;
+  padding-top: 7px;
 }
-/* .menu-btn {
-  border: 0;
-  width: 22px;
-  height: 14px;
-  margin-top: 3px;
-  cursor: pointer;
-  background: url(../images/menu.png) no-repeat center;
-} */
-.nav {
-    display: block;
-  }
-  .nav-menus {
-    float: left;
-    margin-top: 5px;
-  }
-  .nav-menus li {
-    float: left;
-    margin-right: 30px;
-  }
-  .nav-menus li a {
-    color: white;
-    display: inline-block;
-    font-size: 12px;
-    line-height: 14px;
-    vertical-align: middle;
-    text-transform: uppercase;
-  }
 
+.nav {
+  display: block;
+}
+.nav-menus {
+  float: left;
+  margin-top: 5px;
+}
+.nav-menus li {
+  float: left;
+  margin-right: 30px;
+}
+.nav-menus li a {
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 14px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
 
 /* plants style starts */
 .category-container {
-  min-height: 1000px;
+  height: auto;
 }
 .items-container {
-  min-height: 90vh;
+  height: auto;
   width: 100%;
   background: rgb(221, 220, 218);
 }
 .each-item-container {
-  min-height: 1320px;
-  margin-top: 80px;
+  height: auto;
   padding-top: 70px;
 }
 .title-product {
@@ -167,14 +161,15 @@ footer {
   padding-top: 30px;
 }
 .item-category {
-  height: 50vh;
+  height: auto;
   display: block;
   /* flex-wrap: wrap; */
   justify-content: center;
+  padding-bottom: 50px;
 }
 .bucket {
   width: 50%;
-  height: 35%;
+  height: 200px;
   margin: 30px auto;
   color: #ffffff;
   text-align: center;
@@ -185,6 +180,10 @@ footer {
 .bucket:hover {
   background-color: rgba(75, 105, 19, 0.7);
 }
+.bucket h4{
+  padding-top: 65px;
+}
+
 .category-img {
   background: url(../images/background.jpg);
   height: 30px;
@@ -193,17 +192,17 @@ footer {
 }
 
 /* search box style */
-.search-container{
+.search-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.search-box{
+.search-box {
   width: 50%;
   position: relative;
 }
 
-.search-box input[type="text"]{
+.search-box input[type="text"] {
   width: 100%;
   padding: 20px;
   padding-right: 60px;
@@ -213,19 +212,18 @@ footer {
   border-radius: 20px;
   outline: none;
 }
-.search-box input[type="text"]::placeholder, .search-box input[type="text"]{
+.search-box input[type="text"]::placeholder,
+.search-box input[type="text"] {
   color: rgb(70, 68, 68);
   font-style: italic;
   font-weight: lighter;
-  font-size: 25px;
+  font-size: 14px;
 }
-
-
 
 /* pagination style starts */
 .pagination {
-  padding-left: 38%;
-  margin-top: 363px;
+  padding-left: 33%;
+  padding-bottom: 90px;
 }
 .pagination li {
   float: left;
@@ -239,8 +237,6 @@ footer {
   margin-right: 2px;
 }
 
-
-
 /* responsive design  */
 @media (min-width: 768px) {
   .bg-banner {
@@ -252,13 +248,13 @@ footer {
     padding-left: 0 24px;
   }
   .items-container {
-    min-height: 90vh;
+    height: auto;
   }
   .category-container {
-    min-height: 50vh;
+    height: auto;
   }
   .item-category {
-    height: 50vh;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -273,7 +269,7 @@ footer {
   }
   .each-item-container {
     margin-top: 0px;
-    min-height: 88vh;
+    height: auto;
   }
   .pagination {
     padding-left: 42%;
@@ -288,10 +284,11 @@ footer {
     height: 800px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   }
-  .top-header {
+  /* .top-header {
     position: absolute;
-  }
+  } */
   .wrap-container {
     padding: 0;
     margin: 0 auto;

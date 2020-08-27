@@ -1,0 +1,35 @@
+
+.about-us {
+  background-color: rgb(55, 161, 121, 0.2);
+  margin: 0 auto;
+  max-width: 1128px;
+  height: auto;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+.about-us h1 {
+  line-height: 40px;
+  padding-bottom: 30px;
+  color: rgb(70, 68, 68);
+}
+.about-us p {
+  font-size: 20px;
+  color: rgb(70, 68, 68);
+}
+.about-btn {
+  background-color: rgba(72, 177, 72, 0.8);
+  border: none;
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-size: 15px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: white;
+  transition: all 400ms ease-in-out;
+  outline: none;
+  cursor: pointer;
+  margin-top: 40px;
+}

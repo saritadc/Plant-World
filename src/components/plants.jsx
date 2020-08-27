@@ -28,7 +28,7 @@ class Plants extends Component {
         _id: "",
         name: "All Categories",
         imageURL:
-          "https://images.unsplash.com/photo-1520302630591-fd1c66edc19d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60",
+          "https://images.unsplash.com/photo-1534754789238-6250d515412f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60",
       },
       ...data,
     ];
