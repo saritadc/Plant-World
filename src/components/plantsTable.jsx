@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Like from "./common/like";
-import { getCategories } from '../services/getCategory';
 
 
 const PlantsTable = (props) => {

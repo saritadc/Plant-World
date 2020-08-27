@@ -1,6 +1,5 @@
-import http from './httpService';
-import { PLANT_LISTS } from './../constants/endpoints';
-
+import http from "./httpService";
+import { PLANT_LISTS, baseURL } from "./../constants/endpoints";
 
 export function getPlants() {
   return http.get(

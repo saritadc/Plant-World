@@ -7,7 +7,7 @@ import { paginate } from "../utils/paginate";
 import ListGroup from "./common/listGroup";
 import PlantsTable from "./plantsTable";
 import SearchBox from "./searchBox";
-import { PLANT_LISTS } from './../constants/endpoints';
+import { PLANT_LISTS, PLANT_CATEGORY, baseURL } from './../constants/endpoints';
 
 
 class Plants extends Component {
@@ -21,15 +21,21 @@ class Plants extends Component {
   };
 
   async componentDidMount() {
-    const { data } = await getCategories(); //*
+    const { data } = await getCategories(); 
     console.log("data",data)
-    const categories = [{_id:"", name: "All Categories" }, ...data];//*
+    const categories = [
+      {
+        _id: "",
+        name: "All Categories",
+        imageURL:
+          "https://images.unsplash.com/photo-1520302630591-fd1c66edc19d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60",
+      },
+      ...data,
+    ];
 
-    const { data: plants} = await getPlants();//*
-    this.setState({ plants, categories: categories })//*
-    console.log("plants", plants)
-    // console.log(`${process.env.REACT_APP_BASE_URL}${PLANT_LISTS}`);
-
+    const { data: plants} = await getPlants();
+    this.setState({ plants, categories: categories })
+    console.log("plants");
   }
 
   handleLikeToggle = (plant) => {
@@ -71,11 +77,11 @@ class Plants extends Component {
         m.title.toLowerCase().startsWith(searchQuery.toLowerCase())
       );
     else if (selectedCategory && selectedCategory._id)
-      filtered = allPlants.filter(m => m.category._id === selectedCategory._id
+      filtered = allPlants.filter(m => m.category[" _id"] === selectedCategory._id
       );
-
+      console.log("filtered", filtered, selectedCategory);
     const plants = paginate(filtered, currentPage, pageSize);
-
+        console.log("pagina",plants);
     return { totalCount: filtered.length, data: plants };
   }
 
@@ -87,17 +93,7 @@ class Plants extends Component {
       searchQuery,
     } = this.state;
 
-    // if (count === 0) return <p>There is no details in the database</p>;
-
-    //for selecting item according to category
-    // const filtered =
-    //   selectedCategory && selectedCategory._id
-    //     ? allPlants.filter((m) => m.category._id === selectedCategory._id)
-    //     : allPlants;
-
-    // //for pagination
-    // const plants = paginate(filtered, currentPage, pageSize);
-
+  
     const { totalCount, data: plants } = this.getPageData();
     return (
       <div className="items-container wrap-container">
@@ -114,7 +110,6 @@ class Plants extends Component {
         <div className="each-item-container">
           <h1 className="title-second title-product">Our Products</h1>
           <SearchBox value={searchQuery} onChange={this.handleSearch} />
-          {/* <p>There are {filtered .length} plants</p> */}
           <PlantsTable
             plants={plants}
             onLike={this.handleLikeToggle}
