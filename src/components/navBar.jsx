@@ -10,7 +10,7 @@ const NavBar = () => {
           Plant World
         </Link>
         <div className="right-header right">
-          <button className="menu-btn"></button>
+          {/* <button className="menu-btn"></button> */}
           <nav className="nav left clearfix">
             <ul className="nav-menus left clearfix">
               <li className="left">
@@ -34,7 +34,6 @@ const NavBar = () => {
                 </Link>
               </li>
             </ul>
-            <SearchBox/>
           </nav>
         </div>
       </div>

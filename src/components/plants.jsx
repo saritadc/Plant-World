@@ -7,6 +7,8 @@ import { paginate } from "../utils/paginate";
 import ListGroup from "./common/listGroup";
 import PlantsTable from "./plantsTable";
 import SearchBox from "./searchBox";
+import { PLANT_LISTS } from './../constants/endpoints';
+
 
 class Plants extends Component {
   state = {
@@ -20,10 +22,13 @@ class Plants extends Component {
 
   async componentDidMount() {
     const { data } = await getCategories(); //*
+    console.log("data",data)
     const categories = [{_id:"", name: "All Categories" }, ...data];//*
 
     const { data: plants} = await getPlants();//*
     this.setState({ plants, categories: categories })//*
+    console.log("plants", plants)
+    // console.log(`${process.env.REACT_APP_BASE_URL}${PLANT_LISTS}`);
 
   }
 

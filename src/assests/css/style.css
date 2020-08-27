@@ -91,17 +91,34 @@ ul {
   font-size: 18px;
   line-height: 21px;
 }
-.menu-btn {
+/* .menu-btn {
   border: 0;
   width: 22px;
   height: 14px;
   margin-top: 3px;
   cursor: pointer;
   background: url(../images/menu.png) no-repeat center;
-}
+} */
 .nav {
-  display: none;
-}
+    display: block;
+  }
+  .nav-menus {
+    float: left;
+    margin-top: 5px;
+  }
+  .nav-menus li {
+    float: left;
+    margin-right: 30px;
+  }
+  .nav-menus li a {
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 14px;
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+
 
 /* plants style starts */
 .category-container {
@@ -175,6 +192,36 @@ footer {
   background-size: cover;
 }
 
+/* search box style */
+.search-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-box{
+  width: 50%;
+  position: relative;
+}
+
+.search-box input[type="text"]{
+  width: 100%;
+  padding: 20px;
+  padding-right: 60px;
+  box-sizing: border-box;
+  background: rgba(75, 105, 19, 0.1);
+  border: 1px solid transparent;
+  border-radius: 20px;
+  outline: none;
+}
+.search-box input[type="text"]::placeholder, .search-box input[type="text"]{
+  color: rgb(70, 68, 68);
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 25px;
+}
+
+
+
 /* pagination style starts */
 .pagination {
   padding-left: 38%;
@@ -204,29 +251,6 @@ footer {
   .wrap-container {
     padding-left: 0 24px;
   }
-  .menu-btn {
-    display: none;
-  }
-  .nav {
-    display: block;
-  }
-  .nav-menus {
-    float: left;
-    margin-top: 5px;
-  }
-  .nav-menus li {
-    float: left;
-    margin-right: 30px;
-  }
-  .nav-menus li a {
-    color: white;
-    display: inline-block;
-    font-size: 12px;
-    line-height: 14px;
-    vertical-align: middle;
-    text-transform: uppercase;
-  }
-
   .items-container {
     min-height: 90vh;
   }
@@ -249,7 +273,7 @@ footer {
   }
   .each-item-container {
     margin-top: 0px;
-    min-height: 80vh;
+    min-height: 88vh;
   }
   .pagination {
     padding-left: 42%;
