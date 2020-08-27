@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Like from "./common/like";
-import { categories } from '../services/fakeCategoryService';
+import { getCategories } from '../services/getCategory';
 
 
 const PlantsTable = (props) => {
@@ -8,14 +8,14 @@ const PlantsTable = (props) => {
   return (
   
       <div className="item-category">
-        {plants.map((movie) => (
-          <div className="bucket" key={movie._id} style={{backgroundImage: `url(${movie.imageURL}`, backgroundSize:'cover'}}>
-            <h4>{movie.title}</h4>
-            <h5>{movie.category.name}</h5>
+        {plants.map((plant) => (
+          <div className="bucket" key={plant._id} style={{backgroundImage: `url(${plant.imageURL}`, backgroundSize:'cover'}}>
+            <h4>{plant.title}</h4>
+            <h5>{plant.category.name}</h5>
             <div>
               <Like
-                liked={movie.liked}
-                onLikeToggle={() => onLike(movie)}
+                liked={plant.liked}
+                onLikeToggle={() => onLike(plant)}
               />
             </div>
           </div>

@@ -68,18 +68,5 @@ export function getPlant(id) {
   return plants.find((m) => m._id === id);
 }
 
-export function savePlant(plant) {
-  let plantInDb = plants.find((m) => m._id === plant._id) || {};
-  plantInDb.title = plant.title;
-  plantInDb.category = categoriesAPI.categories.find((g) => g._id === plant.categoryId);
-  plantInDb.numberInStock = plant.numberInStock;
-  plantInDb.dailyRentalRate = plant.dailyRentalRate;
 
-  if (!plantInDb._id) {
-    plantInDb._id = Date.now().toString();
-    plants.push(plantInDb);
-  }
-
-  return plantInDb;
-}
 

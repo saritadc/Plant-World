@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import { getPlants } from "../services/fakePlantService";
-import { getCategories } from "../services/fakeCategoryService";
+import { getPlants } from "../services/getPlantData"; //*
+import { getCategories } from "../services/getCategory";//*
 import Pagination from "./common/pagination";
 import { paginate } from "../utils/paginate";
 import ListGroup from "./common/listGroup";
@@ -18,11 +18,12 @@ class Plants extends Component {
     selectedGenres: null,
   };
 
-  componentDidMount() {
-    const categories = [{ name: "All Categories" }, ...getCategories()];
-    this.setState({ plants: getPlants(), categories: categories });
+  async componentDidMount() {
+    const { data } = await getCategories(); //*
+    const categories = [{_id:"", name: "All Categories" }, ...data];//*
 
-    
+    const { data: plants} = await getPlants();//*
+    this.setState({ plants, categories: categories })//*
 
   }
 
@@ -112,7 +113,6 @@ class Plants extends Component {
           <PlantsTable
             plants={plants}
             onLike={this.handleLikeToggle}
-            onDelete={this.handleDelete}
           />
           <Pagination
             itemsCount={totalCount}
