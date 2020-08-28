@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+
 import { getPlants } from "../services/getPlantData"; //*
 import { getCategories } from "../services/getCategory";//*
 import Pagination from "./common/pagination";
@@ -7,7 +8,6 @@ import { paginate } from "../utils/paginate";
 import ListGroup from "./common/listGroup";
 import PlantsTable from "./plantsTable";
 import SearchBox from "./searchBox";
-import { PLANT_LISTS, PLANT_CATEGORY, baseURL } from './../constants/endpoints';
 
 
 class Plants extends Component {
@@ -36,6 +36,9 @@ class Plants extends Component {
     const { data: plants} = await getPlants();
     this.setState({ plants, categories: categories })
     console.log("plants");
+
+
+    
   }
 
   handleLikeToggle = (plant) => {
