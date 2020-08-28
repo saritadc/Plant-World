@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-scroll";
 
 const ListGroup = (props) => {
   const {
@@ -25,7 +26,7 @@ const ListGroup = (props) => {
             backgroundSize: "cover"
           }}
         >
-          {item[textProperty]}
+        <Link to="item" smooth={true} duration={1000}> {item[textProperty]}</Link>
         </div>
       ))}
     </div>

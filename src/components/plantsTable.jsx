@@ -8,6 +8,7 @@ const PlantsTable = (props) => {
     <div className="item-category">
       {plants.map((plant) => (
         <div
+          id="item"
           className="bucket"
           key={plant._id}
           style={{
