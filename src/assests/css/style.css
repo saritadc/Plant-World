@@ -40,9 +40,10 @@ ul {
 
 /* bannerContent style starts */
 .bg-banner {
-  height: 664px;
+  height: auto;
+  padding-bottom: 100px;
   color: white;
-  padding-top: 174px;
+  padding-top: 74px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(../images/background.jpg), #c4c4c4;
   background-repeat: no-repeat;

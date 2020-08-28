@@ -15,12 +15,12 @@ const NavBar = () => {
             <ul className="nav-menus left clearfix">
               <li className="left">
                 <Link to="/" title="Store">
-                  <span onClick={() => scroll.scrollToTop()}>Store</span>
+                  <span onClick={() => scroll.scrollTo(1600)}>Store</span>
                 </Link>
               </li>
               <li>
                 <Link to="/category" title="Category">
-                 <span onClick={() => scroll.scrollTo(700)}>Category</span>
+                 <span onClick={() => scroll.scrollTo(870)}>Category</span>
                 </Link>
               </li>
               <li>
