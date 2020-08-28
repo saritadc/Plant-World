@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Switch, Redirect, BrowserRouter } from "react-router-dom";
 import "./App.css";
 
-import ListGroup from "./components/common/listGroup";
 import Contact from "./pages/contactPage/contact";
 import AboutUs from "./pages/aboutusPage/aboutUs";
 import Banner from "./components/bannerContent";
@@ -26,17 +25,17 @@ function App() {
           <Route
             key="category3"
             exact
-            path="/aboutus"
+            path={routes.ABOUT_US}
             component={AboutUs}
           ></Route>
           <Route
             key="category4"
             exact
-            path="/contact"
+            path={routes.CONTACT_US}
             component={Contact}
           ></Route>
-          <Redirect from="/category" exact to="/store" />
-          <Route key="category5" exact path="/" component={Plants}></Route>
+          <Redirect from={routes.CATEGORY} exact to={routes.STORE} />
+          <Route key="category5" exact path={routes.HOME} component={Plants}></Route>
           <Redirect to="/not-found" />
         </Switch>
         <Footer />

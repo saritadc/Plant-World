@@ -1,5 +1,4 @@
 import http from './httpService';
-import { PLANT_CATEGORY, baseURL } from './../constants/endpoints';
 
 export function getCategories(){
 

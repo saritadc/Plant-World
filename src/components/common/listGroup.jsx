@@ -6,7 +6,6 @@ const ListGroup = (props) => {
     items,
     textProperty,
     valueProperty,
-    imageURL,
     selectedItem,
     onItemSelect,
   } = props;
