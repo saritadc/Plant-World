@@ -23,12 +23,6 @@ function App() {
             path={routes.STORE}
             component={Plants}
           ></Route>
-          {/* <Route
-            key="category2"
-            exact
-            path="/category"
-            component={ListGroup}
-          ></Route> */}
           <Route
             key="category3"
             exact

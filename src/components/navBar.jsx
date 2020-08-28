@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SearchBox from "./searchBox";
+import {animateScroll as scroll} from "react-scroll"
 
 const NavBar = () => {
   return (
     <div className="top-header">
       <div className="wrap-container clearfix">
         <Link to="/" title="Plant-World" className="header-logo left">
-          Plant World
+          <span onClick={() => scroll.scrollToTop()}> Plant World </span>
         </Link>
         <div className="right-header right">
           {/* <button className="menu-btn"></button> */}
@@ -15,22 +15,22 @@ const NavBar = () => {
             <ul className="nav-menus left clearfix">
               <li className="left">
                 <Link to="/" title="Store">
-                  <span>Store</span>
+                  <span onClick={() => scroll.scrollToTop()}>Store</span>
                 </Link>
               </li>
               <li>
                 <Link to="/category" title="Category">
-                  <span>Category</span>
+                 <span onClick={() => scroll.scrollTo(700)}>Category</span>
                 </Link>
               </li>
               <li>
                 <Link to="/aboutus" title="About us">
-                  <span>About us</span>
+                  <span onClick={() => scroll.scrollToBottom()}>About us</span>
                 </Link>
               </li>
               <li>
                 <Link to="/contact" title="Contact">
-                  <span>Contact</span>
+                  <span onClick={() => scroll.scrollToBottom()}>Contact</span>
                 </Link>
               </li>
             </ul>

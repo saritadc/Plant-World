@@ -16,6 +16,7 @@ const ListGroup = (props) => {
       
       {Array.isArray(items) && items.map((item) => (
         <div
+          id="category"
           className="bucket"
           key={item[valueProperty]}
           onClick={() => onItemSelect(item)}
